@@ -9,7 +9,7 @@ public class ExemploOperadores {
 		int idade = 19;
 		double altura = 1.65;
 
-		if (idade > 18 || altura >= 1.80) {
+		if (idade >= 18 && altura >= 1.80) {
 			System.out.println("Competirá");
 		} else {
 			System.out.println("Não Competirá");
