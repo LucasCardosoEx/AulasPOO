@@ -41,6 +41,6 @@ public class Ler4PessoasNomePesoAltura {
 		System.out.print("Digite o peso da quarta pessoa: ");
 		dados4.peso = sc.nextDouble();
 		
-		System.out.println("De acordo com os registros"+ peso.getPeso());
+		//System.out.println("De acordo com os registros"+ peso.getPeso());
 	}
 }
