@@ -2,15 +2,16 @@ package Exercicio;
 
 public class Fixo extends Vendedor {
 
-	protected static Double salarioBase;
-	protected static Double salarioBruto;
-	protected static Double comissao;
+	protected Double salarioBase;
+	protected Double salarioBruto;
+	protected Double comissao;
 
 	public Fixo(String nome, String cpf, Double salarioBase, Double comissao) {
 		super(nome, cpf);
-		Fixo.salarioBase = salarioBase;
+		this.salarioBase = salarioBase;
 		// Fixo.salarioBruto = salarioBruto;
-		Fixo.comissao = comissao;
+		this.comissao = comissao;
+		salarioBruto = salarioBase;
 	}
 
 	@Override
@@ -24,7 +25,7 @@ public class Fixo extends Vendedor {
 	}
 
 	public Double getSalarioBruto() {
-		return calcularSalario(null);
+		return salarioBruto;
 	}
 
 	public Double getcomissao() {
@@ -32,21 +33,19 @@ public class Fixo extends Vendedor {
 	}
 
 	public void setSalarioBase(Double salarioBase) {
-		Fixo.salarioBase = salarioBase;
+		this.salarioBase = salarioBase;
 	}
 
 	public void setSalarioBruto(Double salarioBruto) {
-		Fixo.salarioBruto = salarioBruto;
+		this.salarioBruto = salarioBruto;
 	}
 
 	public void setcomissao(Double comissao) {
-		Fixo.comissao = comissao;
+		this.comissao = comissao;
 	}
 
-	public void calcularSalario(Double valorVenda) {
-		salarioBruto = salarioBase;
-		salarioBruto = valorVenda * comissao;
-		salarioBruto += salarioBase;
+	public void calcularSalario(double valorVenda) {
+		salarioBruto += valorVenda * comissao;
 	}
 
 }

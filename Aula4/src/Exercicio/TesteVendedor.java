@@ -8,8 +8,8 @@ public class TesteVendedor {
 
 	public static void main(String[] args) {
 
-		int resposta = 0, escolha;
-		double valorVenda1, valorVenda2;
+		int resposta = 0, escolha = 0;
+		double venda1 = 0, venda2 = 0, total = 0;
 
 		Fixo vendedora1 = new Fixo("Joana", "123.456.789-10", 2150., 0.1);
 		Fixo vendedora2 = new Fixo("Maria", "109.876.543-21", 2000., 0.1);
@@ -23,17 +23,19 @@ public class TesteVendedor {
 			switch (escolha) {
 			case 1:
 				System.out.println("Digite o valor da venda\n");
-				valorVenda1 = input.nextDouble();
-				vendedora1.calcularSalario(valorVenda1);
+				venda1 = input.nextDouble();
+				vendedora1.calcularSalario(venda1);
 				System.out.println("Deseja encerrar o programa? 1.Sim / 2.Não");
 				resposta = input.nextInt();
+				// total++;
 				break;
 			case 2:
 				System.out.println("Digite o valor da venda\n");
-				valorVenda2 = input.nextDouble();
-				vendedora2.calcularSalario(valorVenda2);
+				venda2 = input.nextDouble();
+				vendedora2.calcularSalario(venda2);
 				System.out.println("Deseja encerrar o programa? 1.Sim / 2.Não");
 				resposta = input.nextInt();
+				// total++;
 				break;
 			default:
 
@@ -47,8 +49,7 @@ public class TesteVendedor {
 		System.out.println("Nome: " + vendedora2.getNome());
 		System.out.println("Salario Bruto: " + vendedora2.getSalarioBruto());
 		System.out.println("----- Total Vendido -----");
-		// Double valorTotal = (valorVenda);
-		// System.out.println("Total: "+ valorTotal );
+		System.out.println("Total: "+ total );
 
 	}
 }
