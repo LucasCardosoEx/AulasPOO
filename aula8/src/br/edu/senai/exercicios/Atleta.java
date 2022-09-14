@@ -12,6 +12,10 @@ public class Atleta {
 		this.posicao = posicao;
 	}
 	
+	public Atleta() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String toString() {
 		return "Atleta [nome=" + nome + ", idade=" + idade + ", posicao=" + posicao + "]";

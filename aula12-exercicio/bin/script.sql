@@ -1,0 +1,1 @@
+creat table conta (numero_conta int Primary Key, titular String varchar(40),saldo double);

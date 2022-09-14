@@ -1,6 +1,7 @@
 package br.edu.senai.exercicios;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Time extends Atleta{
 	private String nome;
